@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Attack : MonoBehaviour {
-	public float Range;
+public class GameVelocity : MonoBehaviour {
+    public float timeScale;
 	// Use this for initialization
 	void Start () {
 	
@@ -10,8 +10,7 @@ public class Attack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.F)) {
-			
-		}
-	}
+        Time.timeScale = timeScale;
+
+    }
 }

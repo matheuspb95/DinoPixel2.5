@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[ExecuteInEditMode]
 public class Shadow : MonoBehaviour {
     public Transform shadow;
     float xOffset, zOffset;
@@ -21,6 +21,6 @@ public class Shadow : MonoBehaviour {
             yPosition = hit.point.y + yOffset;
         }
 
-        shadow.position = new Vector3(transform.position.x - xOffset, yPosition, transform.position.z - zOffset);
+        shadow.position = new Vector3(transform.position.x - Mathf.Sign(transform.localScale.x) * xOffset, yPosition, transform.position.z);
 	}
 }

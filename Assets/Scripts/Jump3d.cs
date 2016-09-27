@@ -4,8 +4,8 @@ using System.Collections;
 public class Jump3d : MonoBehaviour
 {
     Rigidbody body;
-    public float JumpForce;
-    bool Jumping;
+    public float JumpForce, JumpDelay;
+    public bool Jumping;
     // Use this for initialization
     void Start()
     {
@@ -19,10 +19,18 @@ public class Jump3d : MonoBehaviour
         {
             if (!Jumping)
             {
-                body.AddForce(Vector3.up * JumpForce * 100);
+                StartCoroutine(JumpDelayed());
                 Jumping = true;
             }
         }
+    }
+
+    
+
+    IEnumerator JumpDelayed()
+    {
+        yield return new WaitForSeconds(JumpDelay);
+        body.AddForce(Vector3.up * JumpForce * 100);
     }
 
     public void OnCollisionEnter(Collision collision)

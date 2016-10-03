@@ -43,7 +43,6 @@ public class Dash : MonoBehaviour
             {
                 Dashing = true;
                 body.AddForce(Direction);
-                GetComponent<TrailRenderer>().enabled = true;
                 StartCoroutine(StopDash());
             }
         }
@@ -52,7 +51,6 @@ public class Dash : MonoBehaviour
     IEnumerator StopDash()
     {
         yield return new WaitForSeconds(DashTime);
-        GetComponent<TrailRenderer>().enabled = false;
         Dashing = false;
     }
 

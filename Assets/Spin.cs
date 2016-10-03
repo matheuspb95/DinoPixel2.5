@@ -11,7 +11,7 @@ public class Spin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             particles.Emit(200);
             RaycastHit[] hits = Physics.SphereCastAll(transform.position, Range, Vector3.down);

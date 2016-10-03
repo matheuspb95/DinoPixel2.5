@@ -5,18 +5,22 @@ public class AnimationController : MonoBehaviour {
     Animator anim;
     Move3d move;
     Jump3d jump;
+    Dash dash;
+    Attack attack;
     public bool Pressed, Walking, Jumping;
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
         move = GetComponent<Move3d>();
         jump = GetComponent<Jump3d>();
+        dash = GetComponent<Dash>();
+        attack = GetComponent<Attack>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!jump.Jumping)
+        if (!jump.Jumping && !dash.Dashing && !attack.Attacking)
         {
             if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) &&
                !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
@@ -54,6 +58,16 @@ public class AnimationController : MonoBehaviour {
             anim.SetTrigger("Jump");
             anim.SetBool("Jumping", true);
         }
+
+        if(Pressed && Input.GetKeyDown(KeyCode.D))
+        {
+            anim.SetTrigger("Dash");
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            anim.SetTrigger("Attack");
+        }
     }
     
     public void OnCollisionEnter(Collision collision)
@@ -66,7 +80,6 @@ public class AnimationController : MonoBehaviour {
             {
                 anim.SetTrigger("Walk");
             }
-
         }
     }
 }

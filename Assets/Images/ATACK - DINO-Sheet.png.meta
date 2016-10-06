@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cbd3c42e18dc36543b5c8eec573909de
-timeCreated: 1475089668
+timeCreated: 1475697301
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -74,7 +74,7 @@ TextureImporter:
       name: ATACK - DINO-Sheet_1
       rect:
         serializedVersion: 2
-        x: 102
+        x: 101
         y: 0
         width: 102
         height: 70
@@ -92,7 +92,7 @@ TextureImporter:
         width: 102
         height: 70
       alignment: 9
-      pivot: {x: 0.4048031, y: 0.36101562}
+      pivot: {x: 0.35051247, y: 0.37309122}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -105,7 +105,7 @@ TextureImporter:
         width: 102
         height: 70
       alignment: 9
-      pivot: {x: 0.39121142, y: 0.37615702}
+      pivot: {x: 0.3557503, y: 0.3731177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -118,7 +118,7 @@ TextureImporter:
         width: 102
         height: 70
       alignment: 9
-      pivot: {x: 0.38591063, y: 0.3932546}
+      pivot: {x: 0.36505127, y: 0.37805724}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

@@ -23,7 +23,7 @@ public class AnimationController : MonoBehaviour {
         if (!jump.Jumping && !dash.Dashing && !attack.Attacking)
         {
             if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) &&
-               !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+                !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
             {
                 Pressed = false;
             }
@@ -33,7 +33,7 @@ public class AnimationController : MonoBehaviour {
             }
 
             if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) ||
-               Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+                Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 if (!Walking)
                 {
@@ -59,10 +59,7 @@ public class AnimationController : MonoBehaviour {
             anim.SetBool("Jumping", true);
         }
 
-        if(Pressed && Input.GetKeyDown(KeyCode.D))
-        {
-            anim.SetTrigger("Dash");
-        }
+        anim.SetBool("Dashing", dash.Dashing);
 
         if (Input.GetKeyDown(KeyCode.S))
         {

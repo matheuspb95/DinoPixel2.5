@@ -61,7 +61,7 @@ public class AnimationController : MonoBehaviour {
 
         anim.SetBool("Dashing", dash.Dashing);
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && !attack.Attacking)
         {
             anim.SetTrigger("Attack");
         }

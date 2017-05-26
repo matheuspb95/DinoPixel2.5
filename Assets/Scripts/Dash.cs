@@ -62,8 +62,8 @@ public class Dash : MonoBehaviour
                 return;
             float x = collision.transform.position.x - transform.position.x;
             float z = collision.transform.position.z - transform.position.z;
-            Vector3 Impulse = new Vector3(x, 1, z);
-            collision.rigidbody.AddForce(Impulse.normalized * Force);
+            Vector3 Impulse = new Vector3(x, 3, z);
+            collision.rigidbody.AddForce(Impulse.normalized * Force / 1);
         }
     }
 }
